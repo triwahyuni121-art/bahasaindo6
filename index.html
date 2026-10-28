@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelajah Kosakata Kelas VI SD</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-700 to-indigo-800 text-white shadow-lg py-8 px-4 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-2">
+                🔎 Jelajah Kosakata
+            </h1>
+            <p class="text-blue-100 text-lg font-medium">Bahasa Indonesia • Kelas VI SD</p>
+            <span class="inline-block bg-blue-900/50 backdrop-blur-sm text-blue-200 text-xs sm:text-sm px-3 py-1 rounded-full mt-2 border border-blue-400/30">
+                Teks Fiksi & Nonfiksi | Membaca & Memirsa
+            </span>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-3xl w-full mx-auto p-4 sm:p-6 flex-grow">
+
+        <!-- 1. HOME SECTION -->
+        <section id="home" class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8">
+            <div class="text-center mb-6">
+                <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-3">
+                    🚀
+                </div>
+                <h2 class="text-2xl font-bold text-slate-800">Selamat Datang, Penjelajah Kata!</h2>
+                <p class="text-slate-600 text-sm mt-1">Siap menemukan makna kata dan menjadi pembaca yang cerdas?</p>
+            </div>
+
+            <div class="space-y-4 max-w-md mx-auto">
+                <div>
+                    <label for="nama" class="block text-sm font-semibold text-slate-700 mb-1">Nama Peserta Didik</label>
+                    <input type="text" id="nama" placeholder="Tuliskan nama lengkapmu..." 
+                        class="w-full px-4 py-3 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition">
+                </div>
+                <button onclick="mulai()" 
+                    class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-md transition transform active:scale-98 flex items-center justify-center gap-2">
+                    Mulai Belajar <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+
+        <!-- 2. LEARNING MATERIAL SECTION -->
+        <section id="belajar" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 space-y-6">
+            <div class="border-b border-slate-100 pb-4">
+                <h2 class="text-xl font-bold text-blue-700 flex items-center gap-2">
+                    🎯 Tujuan Pembelajaran
+                </h2>
+                <ul class="list-disc list-inside text-slate-600 space-y-1 mt-2 text-sm sm:text-base">
+                    <li>Membedakan teks fiksi dan nonfiksi.</li>
+                    <li>Menemukan arti kosakata berdasarkan konteks.</li>
+                    <li>Menjelaskan penggunaan kosakata dalam teks.</li>
+                </ul>
+            </div>
+
+            <div class="space-y-4">
+                <h2 class="text-xl font-bold text-blue-700 flex items-center gap-2">
+                    📘 Materi Singkat
+                </h2>
+                <div class="grid gap-3 text-sm sm:text-base">
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <span class="font-bold text-slate-800">Teks Fiksi:</span> Teks yang dibangun dari imajinasi atau rekaan pengarang. 
+                        <em class="text-slate-500 block text-xs mt-1">Contoh: Dongeng, cerpen, cerita rakyat.</em>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <span class="font-bold text-slate-800">Teks Nonfiksi:</span> Teks yang menyampaikan informasi berdasarkan fakta dan kenyataan. 
+                        <em class="text-slate-500 block text-xs mt-1">Contoh: Laporan pengamatan, artikel sains, berita.</em>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <span class="font-bold text-slate-800">Makna Denotatif:</span> Makna kata yang sebenarnya / lugas. 
+                        <em class="text-slate-500 block text-xs mt-1">Contoh: "Air sungai itu dingin."</em>
+                    </div>
+                    <div class="p-4 bg-slate-50 border border-slate-200 rounded-xl">
+                        <span class="font-bold text-slate-800">Makna Konotatif:</span> Makna kiasan atau makna tambahan. 
+                        <em class="text-slate-500 block text-xs mt-1">Contoh: "Rina menjadi bintang kelas." (Bintang = murid berprestasi)</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-3 bg-blue-50/60 p-4 sm:p-5 rounded-xl border border-blue-100">
+                <h2 class="text-lg font-bold text-blue-900">📖 Jelajah Contoh Teks</h2>
+                <div class="space-y-2 text-xs sm:text-sm text-slate-700">
+                    <p><b>Teks Fiksi:</b> <i>"Di tengah hutan, seekor kelinci cerdik mencari jalan pulang. Ia melompat melewati semak-semak."</i></p>
+                    <p class="text-blue-800 font-medium">➡️ Kata <b>cerdik</b> berarti pandai menemukan cara atau solusi.</p>
+                    <hr class="border-blue-200/60 my-2">
+                    <p><b>Teks Nonfiksi:</b> <i>"Akar menyerap air dan mineral dari tanah. Air kemudian disalurkan ke bagian tumbuhan lainnya."</i></p>
+                    <p class="text-blue-800 font-medium">➡️ Kata <b>menyerap</b> berarti mengambil atau memasukkan zat ke dalam.</p>
+                </div>
+            </div>
+
+            <button onclick="mulaiKuis()" 
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+                Siap Kuis 🧠
+            </button>
+        </section>
+
+        <!-- 3. QUIZ SECTION -->
+        <section id="kuis" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 space-y-6">
+            <!-- Progress Bar -->
+            <div>
+                <div class="flex justify-between items-center text-xs sm:text-sm text-slate-500 mb-1">
+                    <span id="progres-teks">Soal 1 dari 10</span>
+                    <span id="progres-persen">10%</span>
+                </div>
+                <div class="w-full bg-slate-100 h-2.5 rounded-full overflow-hidden">
+                    <div id="progres-bar" class="bg-blue-600 h-full w-1/10 transition-all duration-300"></div>
+                </div>
+            </div>
+
+            <!-- Question Area -->
+            <div>
+                <h3 id="pertanyaan" class="text-base sm:text-lg font-bold text-slate-800 leading-snug mb-4"></h3>
+                <div id="pilihan" class="space-y-2.5"></div>
+            </div>
+
+            <!-- Feedback Area -->
+            <div id="feedback" class="hidden p-4 rounded-xl text-sm font-medium border"></div>
+
+            <!-- Next Button -->
+            <button id="lanjut" onclick="berikutnya()" 
+                class="hidden w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-xl transition">
+                Soal Berikutnya →
+            </button>
+        </section>
+
+        <!-- 4. RESULT SECTION -->
+        <section id="hasil" class="hidden bg-white rounded-2xl shadow-sm border border-slate-200 p-6 sm:p-8 text-center space-y-6">
+            <div class="w-20 h-20 bg-amber-100 text-amber-500 rounded-full flex items-center justify-center text-4xl mx-auto">
+                🏆
+            </div>
+            
+            <div>
+                <h2 class="text-2xl font-bold text-slate-800">Hasil Belajarmu</h2>
+                <div id="ringkasan" class="mt-4 p-4 bg-slate-50 border border-slate-200 rounded-xl max-w-sm mx-auto space-y-2 text-sm sm:text-base"></div>
+            </div>
+
+            <p id="saran" class="text-sm sm:text-base font-medium text-slate-600 max-w-md mx-auto"></p>
+
+            <div class="flex flex-col sm:flex-row gap-3 justify-center max-w-md mx-auto">
+                <button onclick="unduhCSV()" 
+                    class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 px-5 rounded-xl shadow-sm transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-download"></i> Unduh Hasil (CSV)
+                </button>
+                <button onclick="ulang()" 
+                    class="w-full sm:w-auto bg-slate-200 hover:bg-slate-300 text-slate-700 font-semibold py-3 px-5 rounded-xl transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-rotate-right"></i> Ulangi Kuis
+                </button>
+            </div>
+        </section>
+
+        <!-- 5. TEACHER RESOURCES SECTION -->
+        <section class="mt-6 bg-white rounded-2xl shadow-sm border border-slate-200 p-5 sm:p-6">
+            <h2 class="text-sm font-bold text-slate-400 uppercase tracking-wider mb-3">🔗 Sumber Belajar Guru</h2>
+            <div class="flex flex-wrap gap-2">
+                <a href="https://docs.google.com/document/u/0/" target="_blank" rel="noopener" 
+                   class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-medium px-4 py-2.5 rounded-lg transition">
+                    <i class="fa-solid fa-file-lines text-blue-600"></i> Google Docs
+                </a>
+                <a href="https://docs.google.com/spreadsheets/u/0/" target="_blank" rel="noopener" 
+                   class="inline-flex items-center gap-2 bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-medium px-4 py-2.5 rounded-lg transition">
+                    <i class="fa-solid fa-file-excel text-emerald-600"></i> Google Sheets
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-6 text-slate-400 text-xs sm:text-sm border-t border-slate-200 mt-6 bg-white">
+        Media Pembelajaran Bahasa Indonesia • Kelas VI SD
+    </footer>
+
+    <!-- JavaScript logic -->
+    <script>
+        const soal = [
+            {t: "Dalam cerita, Rani disebut anak yang cerdik. Arti cerdik adalah ...", p: ["Mudah menyerah", "Pandai mencari solusi", "Suka berlari", "Tidak peduli"], j: 1, e: "Cerdik berarti pandai menemukan cara atau solusi."},
+            {t: "Teks tentang proses akar menyerap air termasuk ...", p: ["Dongeng", "Cerita fantasi", "Teks nonfiksi", "Puisi khayalan"], j: 2, e: "Teks tersebut menjelaskan fakta faktual tentang tumbuhan."},
+            {t: "Kalimat 'Dina adalah bintang kelas' bermakna ...", p: ["Dina adalah benda langit", "Dina memakai bintang", "Dina murid berprestasi", "Dina berada di langit"], j: 2, e: "Bintang kelas merupakan ungkapan (konotatif) untuk murid berprestasi."},
+            {t: "Kata 'habitat' dalam teks tentang hewan berarti ...", p: ["Tempat hidup makhluk hidup", "Jenis makanan", "Warna tubuh", "Cara bergerak"], j: 0, e: "Habitat adalah tempat tinggal alami suatu organisme."},
+            {t: "Manakah contoh teks fiksi?", p: ["Laporan pengamatan", "Dongeng Kancil", "Berita cuaca", "Buku petunjuk"], j: 1, e: "Dongeng merupakan cerita rekaan atau bersifat fiksi."},
+            {t: "Arti kata 'meluap' pada kalimat 'Air sungai meluap setelah hujan deras' adalah ...", p: ["Mengering", "Membeku", "Naik hingga keluar dari batas", "Mengalir pelan"], j: 2, e: "Konteks hujan deras menunjukkan air bertambah hingga keluar dari alur sungai."},
+            {t: "Kata yang lazim digunakan dalam teks ilmiah tentang tumbuhan adalah ...", p: ["Keajaiban peri", "Fotosintesis", "Istana awan", "Naga sakti"], j: 1, e: "Fotosintesis merupakan istilah teknis ilmiah pada tumbuhan."},
+            {t: "Manakah kalimat yang menggunakan makna denotatif?", p: ["Hati Budi sekeras batu", "Ayah membanting tulang", "Air di gelas itu dingin", "Dia panjang tangan"], j: 2, e: "Air di gelas dingin menunjukkan makna lugas/sebenarnya."},
+            {t: "Apa petunjuk utama untuk memahami arti kata yang belum dikenal?", p: ["Menebak tanpa membaca", "Melihat konteks kalimat", "Mengabaikan kata", "Membaca judul saja"], j: 1, e: "Konteks kalimat di sekitar kata membantu memberi petunjuk arti kata."},
+            {t: "Perbedaan utama teks fiksi dan nonfiksi adalah ...", p: ["Panjang teksnya", "Warna kertasnya", "Fiksi mengandung rekaan, nonfiksi berdasarkan fakta", "Jumlah paragrafnya"], j: 2, e: "Fiksi berdasar imajinasi/rekaan, sedangkan nonfiksi berisi fakta."}
+        ];
+
+        let nama = "", indeks = 0, benar = 0, dijawab = false, nilai = 0;
+
+        function mulai() {
+            nama = document.getElementById("nama").value.trim();
+            if (!nama) {
+                alert("Tuliskan nama peserta didik terlebih dahulu.");
+                return;
+            }
+            document.getElementById("home").classList.add("hidden");
+            document.getElementById("belajar").classList.remove("hidden");
+        }
+
+        function mulaiKuis() {
+            indeks = 0;
+            benar = 0;
+            dijawab = false;
+            document.getElementById("belajar").classList.add("hidden");
+            document.getElementById("hasil").classList.add("hidden");
+            document.getElementById("kuis").classList.remove("hidden");
+            tampilkanSoal();
+        }
+
+        function tampilkanSoal() {
+            dijawab = false;
+            const total = soal.length;
+            const persen = Math.round(((indeks + 1) / total) * 100);
+
+            document.getElementById("progres-teks").textContent = `Soal ${indeks + 1} dari ${total}`;
+            document.getElementById("progres-persen").textContent = `${persen}%`;
+            document.getElementById("progres-bar").style.width = `${persen}%`;
+
+            document.getElementById("pertanyaan").textContent = soal[indeks].t;
+
+            const feedbackEl = document.getElementById("feedback");
+            feedbackEl.classList.add("hidden");
+            feedbackEl.className = "hidden p-4 rounded-xl text-sm font-medium border";
+
+            document.getElementById("lanjut").classList.add("hidden");
+
+            const area = document.getElementById("pilihan");
+            area.innerHTML = "";
+
+            soal[indeks].p.forEach((teks, i) => {
+                const b = document.createElement("button");
+                b.className = "w-full text-left p-3.5 sm:p-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-sm sm:text-base border border-slate-200 transition flex items-start gap-3";
+                b.innerHTML = `<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-slate-200 text-slate-600 text-xs font-bold shrink-0">${String.fromCharCode(65 + i)}</span> <span>${teks}</span>`;
+                b.onclick = () => jawab(i);
+                area.appendChild(b);
+            });
+        }
+
+        function jawab(pilihan) {
+            if (dijawab) return;
+            dijawab = true;
+
+            const s = soal[indeks];
+            const benarKali = (pilihan === s.j);
+            if (benarKali) benar++;
+
+            const buttons = document.querySelectorAll("#pilihan button");
+            buttons.forEach((b, i) => {
+                b.disabled = true;
+                if (i === s.j) {
+                    b.className = "w-full text-left p-3.5 sm:p-4 rounded-xl bg-emerald-50 text-emerald-800 font-medium text-sm sm:text-base border border-emerald-300 flex items-start gap-3";
+                } else if (i === pilihan && !benarKali) {
+                    b.className = "w-full text-left p-3.5 sm:p-4 rounded-xl bg-rose-50 text-rose-800 font-medium text-sm sm:text-base border border-rose-300 flex items-start gap-3";
+                } else {
+                    b.className = "w-full text-left p-3.5 sm:p-4 rounded-xl bg-slate-50 text-slate-400 font-medium text-sm sm:text-base border border-slate-200 opacity-60 flex items-start gap-3";
+                }
+            });
+
+            const feedbackEl = document.getElementById("feedback");
+            feedbackEl.classList.remove("hidden");
+            if (benarKali) {
+                feedbackEl.classList.add("bg-emerald-50", "text-emerald-800", "border-emerald-200");
+                feedbackEl.innerHTML = `✅ <b>Benar!</b> ${s.e}`;
+            } else {
+                feedbackEl.classList.add("bg-rose-50", "text-rose-800", "border-rose-200");
+                feedbackEl.innerHTML = `❌ <b>Belum tepat.</b> ${s.e}`;
+            }
+
+            const lanjutBtn = document.getElementById("lanjut");
+            lanjutBtn.textContent = (indeks === soal.length - 1) ? "Lihat Hasil 🏆" : "Soal Berikutnya →";
+            lanjutBtn.classList.remove("hidden");
+        }
+
+        function berikutnya() {
+            if (!dijawab) return;
+            if (indeks < soal.length - 1) {
+                indeks++;
+                tampilkanSoal();
+            } else {
+                tampilkanHasil();
+            }
+        }
+
+        function tampilkanHasil() {
+            nilai = Math.round((benar / soal.length) * 100);
+            document.getElementById("kuis").classList.add("hidden");
+            document.getElementById("hasil").classList.remove("hidden");
+
+            document.getElementById("ringkasan").innerHTML = `
+                <p class="text-slate-600">Nama: <b class="text-slate-800">${aman(nama)}</b></p>
+                <p class="text-slate-600">Jawaban Benar: <b class="text-slate-800">${benar} dari ${soal.length}</b></p>
+                <p class="text-xl font-extrabold text-blue-700 mt-2">Nilai: ${nilai} / 100</p>
+            `;
+
+            document.getElementById("saran").textContent = nilai >= 80
+                ? "Hebat! Teruslah berlatih memahami kosakata dalam berbagai teks."
+                : "Ayo berlatih lagi membaca teks dan mencari makna kata berdasarkan konteks.";
+        }
+
+        function aman(teks) {
+            const d = document.createElement("div");
+            d.textContent = teks;
+            return d.innerHTML;
+        }
+
+        function unduhCSV() {
+            const csv = [
+                ["Nama", "Kelas", "Skor Evaluasi", "Jawaban Benar", "Jumlah Soal"],
+                [nama, "VI", nilai, benar, soal.length]
+            ]
+            .map(r => r.map(v => '"' + String(v).replace(/"/g, '""') + '"').join(","))
+            .join("\r\n");
+
+            const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `hasil_belajar_${nama.toLowerCase().replace(/\s+/g, '_')}_kelas_VI.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function ulang() {
+            document.getElementById("hasil").classList.add("hidden");
+            document.getElementById("home").classList.remove("hidden");
+            document.getElementById("nama").value = nama;
+        }
+    </script>
+</body>
+</html>
+```eof
+
+### Summary of Changes
+1. **Visual Overhaul**: Upgraded styling to Tailwind CSS for an engaging, modern layout for Grade 6 SD students.
+2. **Enhanced UX**: Added dynamic progress tracking, colored feedback states (green for correct, red for incorrect), and clearer typography.
+3. **Optimized Scripts**: Ensured safe inputs (`aman()`), accessible button behaviors, and precise dynamic score calculations.
